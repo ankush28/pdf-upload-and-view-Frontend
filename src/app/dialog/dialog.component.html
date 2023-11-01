@@ -1,0 +1,38 @@
+<div class="max-w-md mx-auto p-4 absolute ">
+  <h1 class="text-2xl font-semibold mb-4">Upload PDF</h1>
+  <form class="space-y-4" #uploadForm="ngForm" (ngSubmit)="onSubmit(uploadForm)"  enctype="multipart/form-data">
+    <div class="mb-4">
+      <label class="block text-gray-600">Name</label>
+      <input
+        type="text"
+        class="w-full px-4 py-2 border rounded shadow focus:outline-none focus:ring focus:border-blue-300"
+        [(ngModel)]="name"
+        name="name"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600">Upload PDF</label>
+      <input
+        type="file"
+        class="w-full px-4 py-2 border rounded shadow focus:outline-none focus:ring focus:border-blue-300"
+        (change)="onFileSelected($event)"
+        accept=".pdf"
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      class="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+    >
+      Upload
+    </button>
+
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      mat-dialog-close
+    >
+      Cancel
+    </button>
+  </form>
+</div>

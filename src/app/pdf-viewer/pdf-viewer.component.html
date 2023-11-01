@@ -1,0 +1,25 @@
+<!-- <div>
+    <pdf-viewer [src]="'https://pdfuploadbackend.onrender.com/files/'+pdfName" [render-text]="true" [original-size]="true"></pdf-viewer>
+  </div> -->
+  
+<button (click)="back()" class="p-4"><img src="../../assets/icons8-left-arrow-48.png" /></button>
+  <div id="outerContainer">
+    <div class="pdf-container">
+      <pdf-viewer
+        [src]="pdfUrl"
+        [rotation]="0"
+        [original-size]="false"
+        [show-all]="true"
+        [fit-to-page]="false"
+        [zoom]="1"
+        [zoom-scale]="'page-width'"
+        [stick-to-page]="false"
+        [render-text]="true"
+        [external-link-target]="'blank'"
+        [autoresize]="true"
+        [show-borders]="false"
+        style="width: 100%; height: 1200px;"
+      ></pdf-viewer>
+    </div>
+  </div>
+  
